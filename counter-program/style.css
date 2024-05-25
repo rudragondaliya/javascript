@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+#countlable{
+    text-align: center;
+    font-size: 10em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#counterbtn{
+    text-align: center;
+}
+
+.buttons{
+    padding: 10px 20px;
+    color: white;
+    background-color: hwb(211 44% 11%);
+    font-size: 1.5em;
+}
+
+.buttons:hover{
+    background-color:hwb(211 16% 24%);
+    transition: 0.25s;
+}
