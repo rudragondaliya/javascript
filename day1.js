@@ -217,3 +217,281 @@
 
 // let randomnum = Math.floor(Math.random() *max - min) + min;
 // console.log(randomnum);
+
+
+// *************************** if-else statements ***************************************
+
+// let age = 15  ;
+
+// if(age>=18){
+//     console.log('you are old enough to enter this site.')
+// }
+// else{
+//     console.log('you must be 18+ to enter this site.')
+// }
+
+
+// let time = 12;
+
+// if(time <12) {
+//     console.log("GOOD MORNING")
+// }
+// else{
+//     console.log("GOOD AFTERNOON")
+// }
+
+
+// let isstudent = false;
+
+// if(isstudent){
+//     console.log('you are a student')
+// }
+// else{
+//     console.log('you are not a student')
+// }
+
+
+// let age = 22;
+// let haslicense = true;
+
+// if(age >=18) {
+//     console.log('you are old enough to drive');
+
+//     if(haslicense) {
+//         console.log('you have your license');
+//     }
+//     else{
+//         console.log('you do not have a license');
+//     }
+
+// }
+// else{
+//     console.log('you are not old enough to drive yet!')
+// }
+
+// let age = 8;
+// if(age >= 100){
+//     console.log('you are too old to enter this site')
+// }
+//  else if(age >= 18){
+//     console.log('you are old enough to enter this site')
+// }
+//   else if(age <0){
+//     console.log("your age can't be below 0")
+//   }
+
+//   else if(age >=100){
+//     co
+//   }
+// else{
+//     console.log('you are not old enough to enter this site')
+// 
+
+// const mycheckbox = document.getElementById('mycheckbox');
+// const mysubmit = document.getElementById('mysubmit');
+// const visitbtn = document.getElementById('visitbtn');
+// const mastercard = document.getElementById('mastercard');
+// const paypal = document.getElementById('paypal');
+// const  subresult = document.getElementById('subresult');
+// const paymentresult = document.getElementById('paymentresult');
+
+// mysubmit.onclick = function(){
+
+//   if(mycheckbox.checked){
+//     subresult.textContent = 'you are subscribed';
+//   }
+//   else{
+//     subresult.textContent = 'you are not subscribed';
+//   }
+
+//   if(visitbtn.checked){
+//     paymentresult.textContent = 'you are paying with visa';
+//   }
+//   else if(mastercard.checked){
+//     paymentresult.textContent = 'you are paying with mastercard';
+//   }
+//   else if(paypal.checked){
+//     paymentresult.textContent = 'you are paying with paypal';
+//   }
+//   else{
+//     paymentresult.textContent = 'you must select a payment type!';
+//   }
+// }
+
+
+//**************************** ternary Operator *******************************
+
+// let age = 12;
+//  let message = age >= 18 ? "you are an adult":"you are a minor";
+//  console.log(message);
+
+
+// let age = 22;
+// let message;
+
+// if(age >= 18){
+//   message = "you are a adult";
+// }
+
+// else{
+//   message = "you are a minor";
+// }
+
+
+// let time = 15;
+// let greeting = time < 12 ? "good Moring" : "good afternoon";
+// console.log(greeting)
+
+//  let purchase = 99;
+//  let discount = purachae >= 100 ? 10 : 0;
+//  console.log('your total  is $${purchase - purchase * (discount/100)}')
+
+
+
+// **************************** switch - case ********************************
+
+
+// let day = 3;
+
+// switch(day){
+//   case 1: 
+//       console.log('it is monday');
+//       break;
+
+//    case 2:
+//     console.log('it is tuseday');   
+//     break;
+
+//     case 3:
+//       console.log("it is wednesday");
+//       break;
+
+//     case 4:
+//       console.log("it is thursday");
+//       break;
+
+//     case 5:
+//       console.log("it is friday");
+//       break;
+
+//     case 6 :
+//       console.log("it is saturday");
+//       break;
+
+//     case 7 :
+//       console.log("it is sunday");
+//       break;
+
+//       default :
+//          console.log("it is not a day")
+// }
+
+
+  //  let testscore = 24;
+  //  let lettergrade;
+
+  //  switch(true){
+  //   case testscore >= 90:
+  //   lettergrade = 'A';
+  //   break;
+
+  //   case testscore >= 80:
+  //    lettergrade = 'B';
+  //    break;
+     
+  //   case testscore >= 70:
+  //     lettergrade = 'C';
+  //     break;
+
+      
+  //   case testscore >= 60:
+  //     lettergrade = 'D';
+  //     break;
+
+      
+  //   case testscore >= 50:
+  //     lettergrade = 'E';
+  //     break;
+
+  //     default :
+  //      lettergrade = "F"
+  //  }
+
+  //  console.log(lettergrade)
+
+
+  // ********************************* strings ****************************
+
+
+
+  // let username = "rudragondaliya";
+
+// console.log(username.charAt(4));
+
+// console.log(username.lastIndexOf("a"));
+
+// console.log(username.length)
+
+
+// username = username.trim();
+// console.log(username)
+
+
+// username = username.toUpperCase();
+// console.log(username)
+
+
+// username = username.toLowerCase();
+// console.log(username)
+
+
+// username = username.repeat(3);
+// console.log(username)
+
+
+
+// let result = username.startsWith(" ");
+// console.log(result);
+
+// if(result){
+//      console.log("your name can begin with '' ");
+// }
+
+// else{
+//   console.log(username)
+// }
+
+
+// let result = username.endsWith(" ");
+// console.log(result);
+
+// if(result){
+//      console.log("your name can end with '' ");
+// }
+
+// else{
+//   console.log(username)
+// }
+
+// let result = username.includes(" ");
+// console.log(result);
+
+// if(result){
+//      console.log("your username can't include'' ");
+// }
+
+// else{
+//   console.log(username)
+// }
+
+
+let phone = "123-456-78899"
+
+// phone = phone.replaceAll("-","*");
+// console.log(phone)
+
+// phone = phone.padStart(25,"0");
+// console.log(phone)
+
+phone = phone.padEnd(15,"0");
+console.log(phone)
