@@ -106,6 +106,6 @@
 // // let result = 1 + 2 * 3 + 4 ** 2;
 // let result = 12 % 5 + 8 / 2;
 
-let result = 6 / 2 ** (2 + 5);
+// let result = 6 / 2 ** (2 + 5);
 
-console.log(result);
+// console.log(result);
