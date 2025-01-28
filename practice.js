@@ -1,28 +1,28 @@
 
 // ------------------------------------------------ES5 version --------------------------------------------------
-// var x = 10;
-// var y = 20;
-// console.log(x + y);
+var x = 10;
+var y = 20;
+console.log(x + y);
 
-// function add(a,b){
-//     return a+b;
-// }
-// console.log(add(5,10));
+function add(a,b){
+    return a+b;
+}
+console.log(add(5,10));
 
-// var name = "john";
-// console.log("Hello ,"+ name + "!");
+var name = "john";
+console.log("Hello ,"+ name + "!");
 
 
 // ----------------------------------------------------ES6 version -------------------------------------------------
-// let x = 20;
-// let y = 30;
-// console.log(x + y);
+let x = 20;
+let y = 30;
+console.log(x + y);
 
-// const add = (a,b) => a + b;
-// console.log(add(5,10));
+const add = (a,b) => a + b;
+console.log(add(5,10));
 
-// let name = "Rudra";
-// console.log(`hello , ${name} !`);
+let name = "Rudra";
+console.log(`hello , ${name} !`);
 
 class person {
     constructor(name) {
