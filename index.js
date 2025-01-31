@@ -109,3 +109,52 @@
 // let result = 6 / 2 ** (2 + 5);
 
 // console.log(result);
+
+// ****************************************************************************************************************************
+
+//*********************************************** */ IF-ELSE STATEMENTS********************************************************
+// IF STATEMENTS = if a condition is true,execute some code if not,do something else
+
+// let age;
+// age = prompt("Enter your age:");
+
+// if(age>=18)
+// {
+//     document.getElementById("myAge").textContent = "You are eligible to enter this site";
+// }
+// else{
+//     document.getElementById("myAge").textContent = "you must be 18+ to enter this site";
+// }
+
+// let isStudent = true;
+
+// if(isStudent)
+// {
+//     console.log("You are a student");
+// }
+// else
+// {
+//     console.log("you are not a student");
+// }
+
+// -----------------------------------------------------Nested if-else -----------------------------------
+
+let age = 16;
+let hasLicense = true;
+
+if(age>=18)
+{
+    console.log("you are old wenough to drive");
+
+   if(hasLicense)
+   {
+    console.log("you have your license");
+   }
+   else
+   {
+    console.log("you do not have your license yet!");
+   }
+}
+else{
+    console.log("you must be 18+ to have a license");
+}
