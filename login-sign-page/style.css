@@ -1,0 +1,54 @@
+body{
+    background-color: #ACC8E5 !important;
+    height: 100vh;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.signup{
+    height: 500px;
+    width: 500px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+
+.login{
+    height: 500px;
+    width: 500px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.card-half
+{
+    height: 130px;
+    width: 100%;
+    background-color: #112A46;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.card{
+    border-radius: 100px;
+}
+
+.profile{
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    margin-top: -40px;
+    
+}
+
+
