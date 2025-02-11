@@ -1,0 +1,21 @@
+<script>
+
+   let num = 12;
+
+   function printNum1()
+   {
+     let num = 23;
+    console.log("Inner " + num);
+
+    function printNum2()
+    {
+        let num = 32;
+        console.log("Main " + num);
+    }
+    printNum2();    
+   }
+
+   printNum1();
+   console.log("Outer " + num);
+
+</script>
