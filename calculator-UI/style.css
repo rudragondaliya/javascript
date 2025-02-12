@@ -1,0 +1,27 @@
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main{
+    height: 400px;
+    width: 400px;
+    background-color: black;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.btn-design{
+    height: 50px;
+    width: 50px;
+    background-color: rgb(23, 23, 23);
+    border-radius: 20px;
+
+}
+
+.display{
+    height:60px;
+    width: 350px
+}
