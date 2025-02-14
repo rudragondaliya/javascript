@@ -1,0 +1,11 @@
+<!-- Callback Functions -->
+
+<script>
+    function processUserInput(callback) {
+        let name = "Alice";
+        callback(name);
+       }
+       processUserInput(function(name) {
+        console.log("Hello, " + name);
+    });
+</script>
