@@ -1,0 +1,11 @@
+<!-- transform Array of Objects Using map() -->
+<script>
+
+    const students = [
+  { name: "rudra", marks: 90 },
+  { name: "raj", marks: 40 },
+];
+const updated = students.map(student => ({ ...student, pass: student.marks > 60 }));
+console.log(updated);
+
+</script>

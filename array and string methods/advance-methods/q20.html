@@ -1,0 +1,9 @@
+<!-- Find Duplicates Using filter() and includes() -->
+
+<script>
+
+const numbers = [1,2,3,2,4,5,1];
+const duplicates = numbers.filter((num,index, self) => self.indexOf(num) !== index);
+console.log(duplicates);
+
+</script>
