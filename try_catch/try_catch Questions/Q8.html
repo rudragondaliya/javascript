@@ -1,0 +1,13 @@
+<!-- Nested Try-Catch -->
+<script>
+    try{
+        try{
+            throw new Error("Inner error");
+        } catch (innerError) {
+            console.log("Inner catch:",innerError.message);
+            throw new Error("Outer error");
+        }
+    } catch(outerError) {
+        console.log("outer catch:",outerError.message);
+    }
+</script>

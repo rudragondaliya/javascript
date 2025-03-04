@@ -1,0 +1,11 @@
+<!-- Try-Catch Inside a Function -->
+ 
+<script>
+    function risky(){
+        try {
+            throw new Error("something went wrong");
+        }catch (error) {
+            console.log("Caught an error in function:",error.message)
+        }
+    }
+</script>

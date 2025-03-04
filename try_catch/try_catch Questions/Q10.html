@@ -1,0 +1,8 @@
+<!-- Using Try-Catch with JSON Parsing -->
+ <script>
+    try {
+        let data = JSON.parse("InvalidJson");
+    }catch (error) {
+        console.log("Invalid Json format:",error.message);
+    }
+ </script>

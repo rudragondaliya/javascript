@@ -1,0 +1,12 @@
+<!-- Handling Multiple Exceptions -->
+
+<script>
+    try{
+        let num = parseInt("ABC");
+        if(isNaN(num)) {
+            throw new Error("Invalid number format");
+        }
+    }catch (error) {
+        console.log("Error:",error.message);
+    }
+</script>

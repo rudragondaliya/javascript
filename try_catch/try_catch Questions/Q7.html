@@ -1,0 +1,10 @@
+<!-- Catching TypeErrors -->
+
+<script>
+    try{
+        let obj = null;
+        console.log(obj.name);
+    } catch (error) {
+        console.log("caught TypeError:",error.message);
+    }
+</script>
