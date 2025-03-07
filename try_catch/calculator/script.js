@@ -12,6 +12,13 @@ buttons.forEach((button) => {
         else if(value === 'C'){
             display.value = "";
         }
+        else if(operator.includes(value)) {
+            if(operator.includes(display.value.slice(-1))) {
+                display.value = display.value.slice(0,-1) + value;
+            }else {
+                display.value += value;
+            }
+        }
         else {
             display.value += value;
         }
