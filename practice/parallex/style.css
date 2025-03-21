@@ -1,0 +1,38 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.img-1{
+    background-image: url('https://blog.architizer.com/wp-content/uploads/Heydar-ALiyev-Center-in-Baku_cropped.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+.img-2{
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI7mf5ll4w0xWp2zILhISfc2mF9xUUnXsY7w&s');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+.img-3{
+    background-image: url('https://cdn.bluent.com/images/modern-architecture.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+#content{
+    background-color: yellow;
+}
