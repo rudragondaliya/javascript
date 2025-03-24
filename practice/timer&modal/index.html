@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer and Modal</title>
+</head>
+<style>
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .timer-container{
+        height: 100px;
+        width: 100%;
+        background-color: red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .time{
+        color: white;
+        font-size: 60px;
+        font-weight: 700;
+    }
+
+    .btn{
+        background-color: blue;
+        height: 30px;
+        width: 80px;
+        border: none;
+        color: white;
+        
+    }
+
+    .btns{
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        gap: 20px;
+    }
+</style>
+<body>
+     <div class="timer-container">
+        <div class="time">
+           00: <span id="count">60</span>
+        </div>
+     </div>
+     <div class="btns">
+     <button onclick="startTime()" class="btn">Start</button>
+     <button onclick="StopTime()"  class="btn">Stop</button>
+     <button class="btn">Reset</button>
+     </div>
+
+    
+    <script src="./script.js"></script>
+</body>
+</html>
