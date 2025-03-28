@@ -1,1 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+#main-container{
+    height: 92vh !important;
+    width: 100% !important;
+    border: 2px solid red !important;
+    position: relative;
+    display: flex;
+   
+}
+
+#side-container{
+    height: 92vh;
+    width: 280px;
+    position: absolute;
+    left: 0px;
+    background-color: blueviolet;
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+#table-container{
+    height: 92vh;
+    width: 1238px;
+    position: absolute;
+    left: 280px;
+    border: 2px solid yellow;
+}
