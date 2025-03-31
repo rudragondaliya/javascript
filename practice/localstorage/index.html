@@ -42,9 +42,51 @@
                   <label for="last-name" class="form-label">Password</label>
                   <input type="text" class="form-control" id="last-name">
                 </div>
+                <div id="gender">
+                  <label class="form-label">Gender:</label> <br>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" value="Male" type="radio" name="gender" id="gender1">
+                  <label class="form-check-label" for="gender1">
+                    Male
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" value="Female" type="radio" name="gender" id="gender2">
+                  <label class="form-check-label" for="gender2">
+                    Female
+                  </label>
+                </div>
+              </div>
+
+              <div class="hobby mt-2">
+                <label class="form-label">Hobby:</label> <br>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" value="Dancing" id="hobby1">
+                  <label class="form-check-label" for="dance">
+                    Dancing
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" value="Singing" id="flexCheckChecked" checked>
+                  <label class="form-check-label" for="sing">
+                    Singing
+                  </label>
+                </div>
+              </div>
+               
+              <div class="city mt-2">
+                <label class="form-label">City:</label>
+                <select class="form-select" aria-label="Default select example">
+                  <option selected disabled>--city--</option>
+                  <option value="1">Navsari</option>
+                  <option value="2">Surat</option>
+                  <option value="3">Vapi</option>
+                </select>
+              </div>
+
                 <div class="mb-3">
                     <label for="Phone" class="form-label">Phone no:</label>
-                    <input type="number" class="form-control" id="Phone">
+                    <input type="tel" class="form-control" id="Phone">
                   </div>
                   <div class="sub-btn text-center mt-4">
                 <button type="submit" class="btn btn-dark w-50 " id="formBtn">Register</button>
@@ -62,6 +104,8 @@
                         <th>Sr.no</th>
                         <th>First Name</th>
                         <th>Last Name</th>
+                        <th>Gender</th>
+                        <th>Hobby</th>
                         <th>Phone.no</th>
                         <th>Action</th>
                     </tr>

@@ -1,6 +1,9 @@
 
 let firstName = document.getElementById("first-name");
 let lastName = document.getElementById("last-name");
+let genderVal = document.querySelectorAll('input[name ="gender"]');
+let hobbyVal = document.querySelectorAll('input[type="checkbox"]');
+let cityVal = document.querySelectorAll('input[type=""]')
 let Phone = document.getElementById("Phone");
 let showData = document.querySelector("#table tbody");
 let form = document.getElementById("myform");
@@ -11,10 +14,32 @@ firstName.focus();
 
 form.addEventListener('submit',(event) =>{
     event.preventDefault();
+  
+    let gender = "";
+    if(genderVal[0].checked){
+         gender = genderVal[0].value;
+    }
+    else
+    {
+        gender = genderVal[1].value;
+    }
+
+    let hobby = [];
+    for(let i = 0; i<hobbyVal.length;i++){  
+        if(hobbyVal[i].checked){
+            hobby.push(hobbyVal[i].value);
+        }
+    }
+
+    console.log(hobby)
+
+
 
     let obj = {
         firstName: firstName.value,
         lastName:  lastName.value,
+        genderVal: gender,
+        hobbyVal:  hobby,
         Phone: Phone.value
     }
 
@@ -44,6 +69,8 @@ const display = ()=> {
                <td>${index +1}</td>
                <td>${user.firstName}</td>
                <td>${user.lastName}</td>
+               <td>${user.genderVal}</td>
+               <td>${user.hobbyVal}</td>
                <td>${user.Phone}</td>
                <td>
                 <button onclick ="editUser(${index})" class="btn btn-success">Edit</button>

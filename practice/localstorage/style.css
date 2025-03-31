@@ -7,7 +7,6 @@
 #main-container{
     height: 92vh !important;
     width: 100% !important;
-    border: 2px solid red !important;
     position: relative;
     display: flex;
    
@@ -29,5 +28,6 @@
     width: 1238px;
     position: absolute;
     left: 280px;
-    border: 2px solid yellow;
+    overflow-y: scroll;
+    scrollbar-width: none;
 }
