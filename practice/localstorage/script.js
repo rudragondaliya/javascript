@@ -3,7 +3,7 @@ let firstName = document.getElementById("first-name");
 let lastName = document.getElementById("last-name");
 let genderVal = document.querySelectorAll('input[name ="gender"]');
 let hobbyVal = document.querySelectorAll('input[type="checkbox"]');
-let cityVal = document.querySelectorAll('input[type=""]')
+let cityVal = document.querySelector('#select');
 let Phone = document.getElementById("Phone");
 let showData = document.querySelector("#table tbody");
 let form = document.getElementById("myform");
@@ -31,8 +31,11 @@ form.addEventListener('submit',(event) =>{
         }
     }
 
-    console.log(hobby)
-
+    let city = [];
+    for(let i= 0;i<cityVal.length;i++)
+        if(cityVal[i].selected){
+            city.push(cityVal[i].value)
+        }
 
 
     let obj = {
@@ -40,6 +43,7 @@ form.addEventListener('submit',(event) =>{
         lastName:  lastName.value,
         genderVal: gender,
         hobbyVal:  hobby,
+        cityVal:  city,
         Phone: Phone.value
     }
 
@@ -71,6 +75,7 @@ const display = ()=> {
                <td>${user.lastName}</td>
                <td>${user.genderVal}</td>
                <td>${user.hobbyVal}</td>
+               <td>${user.cityVal}</td>
                <td>${user.Phone}</td>
                <td>
                 <button onclick ="editUser(${index})" class="btn btn-success">Edit</button>
