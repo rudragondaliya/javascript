@@ -8,6 +8,7 @@ let Phone = document.getElementById("Phone");
 let showData = document.querySelector("#table tbody");
 let form = document.getElementById("myform");
 let btn = document.getElementById("formBtn");
+let user = JSON.parse(localStorage.getItem("users")) || [];
 let editId = -1;
 let users = [];
 firstName.focus();
@@ -55,6 +56,17 @@ form.addEventListener('submit',(event) =>{
         users[editId] = obj;
         editId = -1;
     }
+
+    localStorage.setItem("users",JSON.stringify(users));
+    firstName.value = "";
+    lastName.value = "";
+    genderVal.value = "";
+    hobbyVal.value = "";
+    cityVal.value = "";
+    Phone.value = "";
+    
+
+
 
     firstName.focus();
    
