@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+.img-banner{
+    height: 600px;
+    width: 100%;
+    border: 2px solid;
+    background-color: rgb(208, 206, 206);
+    position: relative;
+}
+
+.navbar{
+    height: 80px;
+    backdrop-filter: blur(2px) !important;
+}
+
+#main-img{
+    height: 510px;
+    width: 100%;
+    object-fit: contain;
+}
+
+.banner-text{
+    position:absolute;
+    top: 180px;
+    left: 100px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+       
+}
+
+.ex-btn{
+    background-color: #e8363c !important;
+    font-family: Verdana, Geneva, Tahoma, sans-serif ;
+}
+
+.ex-btn:hover{
+    background-color: #f6121a !important;
+}
+
