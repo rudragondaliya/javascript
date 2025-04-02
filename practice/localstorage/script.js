@@ -64,7 +64,7 @@ form.addEventListener('submit',(event) =>{
     hobbyVal.value = "";
     cityVal.value = "";
     Phone.value = "";
-    0
+    
 
 
 
