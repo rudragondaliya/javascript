@@ -84,7 +84,11 @@
 
 .product-item{
     overflow: hidden !important;
-  
+}
+
+.card{
+    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+    border: none !important;
 }
 
 .product-item:hover img{
