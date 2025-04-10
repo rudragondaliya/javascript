@@ -19,7 +19,6 @@
     left: 0px;
     right: 0px;
     transition: top 0.5s ease-in-out;
-    z-index: 2000;
 }
 
 #main-img{
@@ -94,4 +93,19 @@
 .product-item:hover img{
    scale: 1.1;
    transition: 0.3s;
+}
+
+.total-box{
+    height: 300px !important;
+    width: 100% !important;
+    border: 2px solid grey !important;
+
+}
+
+.qty-count{
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width:   100px;
+    padding: 20px;
 }
