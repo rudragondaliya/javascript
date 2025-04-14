@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.minus{
+    font-size: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.plus{
+    font-size: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.num{
+    font-size: 15px;
+}

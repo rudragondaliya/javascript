@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>covid-19-app</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-white shadow">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">
+                <img src="./img/logo.png" alt="">
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse fw-bold" id="navbarSupportedContent">
+                <ul class="navbar-nav gap-5 ms-auto mb-2 mb-lg-0  d-flex align-items-center p-4">
+                  <li class="nav-item ">
+                    <a class="nav-link" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Symptoms</a>
+                  </li>
+                  <li class="nav-item ">
+                    <a class="nav-link" href="#">Prevention</a>
+                  </li>
+                  <li class="nav-item ">
+                    <a class="nav-link" href="#">FAQ</a>
+                  </li>
+                  <button class="btn fw-bold emergency-btn">Emergency Call</button>
+              </div>
+            </div>
+          </nav>
+    </header>
+
+    <main>
+        <section class="banner-covid mt-2">
+            <div class="container-fluid">
+               <div class="row">
+                <div class="col-md-6">
+                  <div class="banner-box">
+                    <div class="banner-txt ">
+                        <button class="btn ban-btn-1 mb-3">Stay Home</button>
+                        <h1 id="txt-1">Stay At Home,</h1> <br>
+                        <h1 id="txt-2">Keep You & Your</h1> <br>
+                        <h1 id="txt-3">Family Safe</h1>
+                        <p class="mt-5 fw-semibold fs-5">Amet consectetur adispisicing elit sed do eiusmod.</p>
+                        <button class="btn ban-btn-2 p-2">How To Protect</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="banner-img">
+                        <img src="./img/banner-img-1.png" alt="">
+                    </div>
+                </div>
+               </div>
+            </div>
+        </section>
+
+        <section class="about p-5 mt-5">
+          <div class="container-fluid">
+            <div class="about-title text-center">
+              <button class="btn ab-btn-1">About Corona</button>
+              <h1 class="fs-1 mt-3 fw-bold">Coronavirus Disease (COVID-19) <br>
+                Outbreak Situation</h1>
+
+            </div>
+            <div class="row mt-5">
+              <div class="col-md-6">
+                  <div class="ab-img text-center mt-3">
+                    <img src="./img/about-1.png" alt="">
+                  </div>
+              </div>
+              <div class="col-md-6">
+                <div class="ab-txt text-center mt-3 fs-3">
+                  <div class="title-box p-3">Overview</div>
+                  <p class="text-start fs-5 text-secondary">Coronavirus disease (COVID-19) is an infectious disease caused by a <br> newly discovered coronavirus. <br>
+              <div class="text-start fs-5 mt-4 text-secondary">Most people infected with the COVID-19 virus will experience mild to <br> moderate respiratory illness and recover without requiring special <br>treatment. Older people, and those with underlying medical problems <br> like cardiovascular disease, diabetes, chronic respiratory disease, and <br>cancer are more likely to develop serious illness</div>
+                </p>
+                <ul class="fs-5 text-start mt-3 text-secondary" >
+                  <li>Avoid touching your face.</li>
+                  <li>Cover your mouth and nose when coughing.</li>
+                  <li>Stay home if you feel unwell.</li>
+                </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="data p-5">
+          <div class="container-fluid">
+            <div class="data-title text-center mt-4 ">
+              <h1>🌍 COVID-19 Global Stats</h1>
+            </div>
+            <div class="row mt-5 p-4">
+              <div class="col position-relative">
+                <div class="icon-1">
+                  <img src="./img/icon-1.png" alt="">
+                </div>
+                  <div class="card shadow text-center p-5" id="confirmed">
+                    <h2>Confirmed</h2>
+                    <p id="totalConfirmed">Loading...</p>
+                  </div>
+              </div>
+              <div class="col position-relative">
+                <div class="icon-2">
+                  <img src="./img//icon-2.png" alt="">
+                </div>
+                <div class="card  shadow text-center p-5" id="deaths">
+                  <h2>Deaths</h2>
+                  <p id="totalDeaths">Loading...</p>
+                </div>
+              </div>
+              <div class="col position-relative">
+                <div class="icon-3">
+                  <img src="./img/icon-3.png" alt="">
+                </div>
+                <div class="card shadow text-center p-5" id="active">
+                  <h2>Active cases</h2>
+                  <p id="totalActive">Loading...</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </section>
+       
+      <section class="symptons p-5">
+        <div class="container-fluid">
+          <div class="row mt-5">
+            <div class="col-md-6">
+                <div class="symptons mt-3">
+                  <div class="sym-txt  mt-3 fs-3">
+                    <div class="title-box-2 ">
+                      <button class="btn sym-btn text-start">Main Symptoms</button>
+                    </div>
+                    <p class="text-start fs-5 text-secondary">Coronavirus disease (COVID-19) is an infectious disease caused by a <br> newly discovered coronavirus. <br>
+                <div class="text-start fs-5 mt-4 text-secondary">Most people infected with the COVID-19 virus will experience mild to <br> moderate respiratory illness and recover without requiring special <br>treatment. Older people, and those with underlying medical problems <br> like cardiovascular disease, diabetes, chronic respiratory disease, and <br>cancer are more likely to develop serious illness</div>
+                  </p>
+                  <ul class="fs-5 text-start mt-3 text-secondary" >
+                    <h5>Common Symptoms Include:</h5>
+                    <li>Fever.</li>
+                    <li>Tiredness</li>
+                    <li>Dry Cough</li>
+                  </ul>
+                  </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+             <div class="symptons-img text-center">
+              <img src="./img/symptoms-1.png" alt="">
+             </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="map p-5 mt-4">
+        <div class="container-fluid">
+          <div class="map-title text-center ">
+            <h1>More Than 100k Died in <br>
+              Covid-19</h1>
+          </div>
+          <div class="map-img text-center w-100 mt-3">
+            <img src="./img/map.png" alt="">
+          </div>
+        </div>
+      </section>
+
+      <div class="container-fluid gx-0 mb-0 my-5">
+        <footer class="text-center text-lg-start text-dark">
+          <section class="d-flex justify-content-between p-4 text-white">
+            <div class="me-5">
+              <span>Get connected with us on social networks:</span>
+            </div>
+            <div>
+              <a href="" class="text-white me-4">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="" class="text-white me-4">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="" class="text-white me-4">
+                <i class="fab fa-google"></i>
+              </a>
+              <a href="" class="text-white me-4">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="" class="text-white me-4">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="" class="text-white me-4">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </section>
+          <section>
+            <div class="container text-center text-md-start mt-5">
+              <div class="row mt-3">
+                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                  <h6 class="text-uppercase fw-bold"><img src="./img/logo.png" alt=""></h6>
+                  <hr class="mb-4 mt-0 d-inline-block mx-auto" />
+                  <p>
+                    Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  </p>
+                </div>
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                  <h6 class="text-uppercase fw-bold">Services</h6>
+                  <hr class="mb-4 mt-0 d-inline-block mx-auto" />
+                  <p><a href="#!" class="text-dark">About Us</a></p>
+                  <p><a href="#!" class="text-dark">Symptoms</a></p>
+                  <p><a href="#!" class="text-dark">Prevention</a></p>
+                  <p><a href="#!" class="text-dark">Our Doctors</a></p>
+                </div>
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                  <h6 class="text-uppercase fw-bold">Regions</h6>
+                  <hr class="mb-4 mt-0 d-inline-block mx-auto" />
+                  <p><a href="#!" class="text-dark">America</a></p>
+                  <p><a href="#!" class="text-dark">Africa</a></p>
+                  <p><a href="#!" class="text-dark">South East Asia</a></p>
+                  <p><a href="#!" class="text-dark">Australia</a></p>
+                </div>
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                  <h6 class="text-uppercase fw-bold">Contact</h6>
+                  <hr class="mb-4 mt-0 d-inline-block mx-auto" />
+                  <p><i class="fas fa-home mr-3"></i> Flat 20, Reynolds Neck, North <br> Helenaville, FV77 8WS</p>
+                  <p><i class="fas fa-envelope mr-3"></i> info@example.com</p>
+                  <p><i class="fas fa-phone mr-3"></i> +2(305) 587-3407</p>
+                  <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <div class="text-center p-3">
+            © 2020 Copyright:
+            <a class="text-dark" href="#"> All Right Reserved</a>
+          </div>
+        </footer>
+      </div>
+
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+</body>
+</html>

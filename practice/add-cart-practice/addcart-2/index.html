@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Addcart</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand fw-bold" href="#">addCart</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link text-dark fw-bold" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+            <div class="icons d-flex align-items-center fs-5">
+                <div class="icon-1 mx-3">
+                    <i class="bi bi-search"></i>
+                </div>
+                <div class="icon-1 mx-3">
+                    <i class="bi bi-person-circle"></i>
+                </div>
+                <div class="icon-1 me-3">
+                    <button class="btn fs-5" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                        <i class="bi bi-cart-fill"></i>
+                      </button>
+                </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      
+      <section class="products">
+        <div class="container-fluid">
+          <div class="title text-start ms-3 mt-3 fs-1 fw-bold">Cart</div>
+          <hr>
+          <div class="row">
+            <div class="col">
+              <div class="card" style="width: 18rem;" >
+                <img src="./img/890057-10755699.avif" class="card-img-top" alt="..."  height="360px">
+                <div class="card-body">
+                  <h5 class="card-title">polo</h5>
+                  <h5 class="card-subtitle text-secondary"><small>$100.00</small></h5>
+                  <p class="card-text"></p>
+                  <a href="#" class="btn btn-primary cartBtn">Add to cart</a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card" style="width: 18rem;" >
+                <img src="./img/8905875155416-18.jpg" class="card-img-top" alt="..." height="360px" >
+                <div class="card-body">
+                  <h5 class="card-title">Ax</h5>
+                  <h5 class="card-subtitle text-secondary"><small>$100.00</small></h5>
+                  <p class="card-text"></p>
+                  <a href="#" class="btn btn-primary cartBtn">Add to cart</a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card" style="width: 18rem;" >
+                <img src="./img/ALFET-PEACH-03470HERO-1.webp" class="card-img-top" alt="..."height="360px" >
+                <div class="card-body">
+                  <h5 class="card-title">HM</h5>
+                  <h5 class="card-subtitle text-secondary"><small>$100.00</small></h5>
+                  <p class="card-text"></p>
+                  <a href="#" class="btn btn-primary cartBtn">Add to cart</a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card" style="width: 18rem;" >
+                <img src="./img/aw-24_4000x5000-10-10-24_mfk-10316-t-158-light-yellow_1_mfk-10316-t-158-light-yellow.webp" class="card-img-top" alt="..."height="360px" >
+                <div class="card-body">
+                  <h5 class="card-title">zara</h5>
+                  <h5 class="card-subtitle text-secondary"><small>$100.00</small></h5>
+                  <p class="card-text"></p>
+                  <a href="#" class="btn btn-primary cartBtn">Add to cart</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- offcanvas -->
+      <div class="offcanvas offcanvas-end w-100" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div class="card-items">
+            <h1 class="text-start">cart</h1>
+            <hr>
+            <div class="row">
+              <div class="col-md-8">
+                <table class="table mt-4 table-striped" id="table">
+                  <thead>
+                    <tr>
+                      <th>Sr.no</th>
+                      <th>Product</th>
+                      <th>Quantity</th>
+                      <th>SubTotal</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  
+                  </tbody>
+                </table>
+              </div>
+              <div class="col-md-4">
+                <div class="total-box mt-4 ">
+                  <h3 class="text-start ms-3 mt-4">Cart Totals</h3>
+                  <div class="total-bill mt-5">
+                    <div class="total-text d-flex justify-content-between text-secondary">
+                      <h6 class="ms-3">Subtotal</h6>
+                      <h6 class="me-3 totalbill">$00.00</h6>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="total-text d-flex justify-content-between text-secondary">
+                    <h6 class="ms-3">Total</h6>
+                    <h6 class="me-3 totalbill">$00.00</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+     
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
