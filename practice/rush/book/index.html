@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <title>books-curd-operation</title>
+  </head>
+  <body>
+    <header>
+      <button class="btn btn-dark m-3" data-bs-target="#offcanvas" data-bs-toggle="offcanvas">cart</button>
+
+      <div class="offcanvas offcanvas-top vh-100" id="offcanvas">
+        <div class="offcanvas-header">
+          <h2>Data</h2>
+          <button class="btn-close bg-secondary rounded-circle" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+          <section class="container mt-5">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>index</th>
+                  <th>Books Name</th>
+                  <th>Author Name</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="showData"></tbody>
+            </table>
+          </section>
+        </div>
+      </div>
+    </header>
+
+    <header>
+      <button class="btn btn-dark m-3" data-bs-target="#offcanvas2" data-bs-toggle="offcanvas">Saved Item</button>
+
+      <div class="offcanvas offcanvas-top vh-100" id="offcanvas2">
+        <div class="offcanvas-header">
+          <h2>Save item</h2>
+          <button class="btn-close bg-secondary rounded-circle" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+          <section class="container mt-5">
+            <div id="addData" class="d-flex flex-wrap gap-3"></div>
+          </section>
+        </div>
+      </div>
+    </header>
+
+    <section class="container w-50 mt-5">
+      <form id="form">
+        <div class="mb-3">
+          <label for="booksName" class="form-label">Books Name</label>
+          <input type="text" id="booksName" class="form-control" />
+        </div>
+
+        <div class="mb-3">
+          <label for="authorName" class="form-label">Author Name</label>
+          <input type="text" id="authorName" class="form-control" />
+        </div>
+
+        <button class="btn btn-primary" id="btnId">Submit</button>
+      </form>
+    </section>
+
+    <section>
+      <div class="toast-container position-fixed bottom-0 start-0 p-3">
+        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+          <div class="toast-body"></div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      let booksName = document.getElementById("booksName");
+      let authorName = document.getElementById("authorName");
+      let form = document.getElementById("form");
+      let showData = document.getElementById("showData");
+      let addData = document.getElementById("addData");
+      let btnId = document.getElementById("btnId");
+      let arr = JSON.parse(localStorage.getItem("arr")) || [];
+      let savedItem = JSON.parse(localStorage.getItem("savedItem")) || [];
+      let liveToast = document.getElementById("liveToast");
+      let toastBody = document.querySelector(".toast-body");
+      let editId = -1;
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        let obj = {
+          bookName: booksName.value,
+          authorName: authorName.value,
+        };
+
+        if (editId === -1) {
+          arr.push(obj);
+        } else {
+          arr[editId] = obj;
+          editId = -1;
+        }
+
+        if (btnId.innerText === "Submit") {
+          toastBody.innerText = "Data Stored";
+        } else {
+          toastBody.innerText = "Update Successful";
+        }
+
+        localStorage.setItem("arr", JSON.stringify(arr));
+
+        resetForm();
+        toast();
+        display();
+      });
+
+      function resetForm() {
+        booksName.value = "";
+        authorName.value = "";
+        btnId.innerText = "Submit";
+        btnId.classList.remove("btn-success");
+        btnId.classList.add("btn-primary");
+      }
+
+      function toast() {
+        liveToast.style.display = "block";
+
+        setTimeout(() => {
+          liveToast.style.display = "none";
+        }, 2000);
+      }
+
+      function display() {
+        showData.innerHTML = "";
+
+        arr.forEach((book, index) => {
+          let row = document.createElement("tr");
+
+          let { bookName, authorName } = book;
+
+          row.innerHTML = `
+                <td>${index + 1}</td>
+                <td>${bookName}</td>
+                <td>${authorName}</td>
+                <td>
+                    <button class="btn btn-danger" onclick="deleteBtn(${index})">Delete</button>
+                    <button class="btn btn-danger" onclick="editBtn(${index})" data-bs-dismiss="offcanvas">Edit</button>
+                    <button class="btn btn-danger" onclick="addToBtn(${index})">Add</button>
+                </td>
+                `;
+
+          showData.append(row);
+        });
+      }
+
+      display();
+
+      function deleteBtn(index) {
+        arr.splice(index, 1);
+        localStorage.setItem("arr", JSON.stringify(arr));
+        toastBody.innerText = "Data Delete";
+        toast();
+        display();
+      }
+
+      function editBtn(index) {
+        editId = index;
+        let bookVal = arr[editId];
+        booksName.value = bookVal.bookName;
+        authorName.value = bookVal.authorName;
+        btnId.innerText = "Update";
+        btnId.classList.add("btn-success");
+        btnId.classList.remove("btn-primary");
+      }
+
+      function displayCart() {
+        addData.innerHTML = "";
+
+        savedItem.forEach((book, index) => {
+          let list = document.createElement("ul");
+
+          let { bookName, authorName } = book;
+
+          list.innerHTML = `
+                <li>${index + 1}</li>
+                <li>${bookName}</li>
+                <li>${authorName}</li>
+                <li>
+                    <button class="btn btn-danger" onclick = "deleteItem(${index})">Delete</button>    
+                </li>
+                `;
+
+          addData.append(list);
+        });
+      }
+
+      displayCart();
+
+      function addToBtn(index) {
+        let books = arr[index];
+        localStorage.setItem("savedItem", JSON.stringify(savedItem));
+        savedItem.push(books);
+        toastBody.innerText = "Data Saved";
+        toast();
+        displayCart();
+      }
+
+      function deleteItem(index) {
+        savedItem.splice(index, 1);
+        localStorage.setItem("savedItem", JSON.stringify(savedItem));
+        toastBody.innerText = "Saved Item removed";
+        toast();
+        displayCart();
+      }
+    </script>
+  </body>
+</html>

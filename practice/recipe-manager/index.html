@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe-Manager</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container-fluid">
+        <h1 class="text-center mt-5">Recipe-manager</h1>
+        <div class="row justify-content-center mt-3">
+            <div class="col-md-4">
+                <form id="form" method="post">
+                    <div class="mb-3">
+                      <label for="recipe" class="form-label">Recipe</label>
+                      <input type="text" class="form-control" id="recipe" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                      <label for="ingridents" class="form-label">Ingridents</label>
+                      <textarea class="form-control" id="ingridents" rows="3"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="time" class="form-label">Preparation Time (in minutes)</label>
+                        <input type="text" class="form-control" id="time" aria-describedby="emailHelp">
+                      </div>
+                    
+                    <button type="submit" class="btn btn-primary formBtn">Submit</button>
+                  </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-md-8 mt-4">
+                <table id="table" class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Sr.no</th>
+                            <th>Recipe</th>
+                            <th>Ingridents</th>
+                            <th>Preparaton-Time</th>
+                            <th>Acton</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                      
+  
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
